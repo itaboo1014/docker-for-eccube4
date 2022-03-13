@@ -58,8 +58,7 @@ platform: linux/amd6 # 変更4
 
 - リポジトリに移動しビルドします。
 ```
-docker-sync start
-HOST_UID=$(id -u) docker-compose up -d --build
+HOST_UID=$(id -u) docker-compose up --build
 ```
 
 ## 参考

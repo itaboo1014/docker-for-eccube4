@@ -1,0 +1,8 @@
+version: '2'
+syncs:
+  eccube-sync:
+    src: '.'
+    sync_host_ip: '127.0.0.1'
+    sync_host_port: '5000'
+    sync_strategy: 'native_osx'
+    sync_excludes: ['.git', '.gitignore', 'node_modules', 'var']

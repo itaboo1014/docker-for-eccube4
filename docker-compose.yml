@@ -1,0 +1,52 @@
+version: '3'
+
+services:
+  db:
+    # image: mysql:5.7
+    # image: mariadb:10.3
+    # platform: linux/amd64
+    container_name: eccube_db
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: eccubedb
+      MYSQL_USER: dbuser
+      MYSQL_PASSWORD: secret
+    volumes:
+      - eccube-db-data:/var/lib/mysql
+    ports:
+      - 3306:3306
+  
+  phpmyadmin:
+    container_name: phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8888:80
+    environment:
+      PMA_HOST: eccube_db
+      PMA_USER: dbuser
+      PMA_PASSWORD: secret
+
+  app:
+    build: .
+    container_name: eccube
+    volumes:
+      - eccube-sync:/var/www/html
+    ports:
+      - 8080:80
+    stdin_open: true
+    tty: true
+    depends_on:
+      - db
+  
+  # mailcatcher:
+  #   container_name: mailcatcher
+  #   image: schickling/mailcatcher
+  #   ports:
+  #     - "1080:1080"
+  #     - "1025:1025"
+
+volumes:
+  eccube-sync:
+    external: true
+  eccube-db-data:
+    driver: local

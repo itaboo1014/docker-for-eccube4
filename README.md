@@ -24,7 +24,7 @@ https://github.com/itaboo1014/docker-for-eccube4.git
 
 ### EC-CUBE公式のリポジトリに本リポジトリのファイルをコピー&上書きします。
 ```
-cp docker-for-eccube4/docker-compose.yml docker-for-eccube4/docker-sync.yml docker-for-eccube4/Dockerfile docker-for-eccube4/entypoint.sh ec-cube
+cp docker-for-eccube4/docker-compose.yml docker-for-eccube4/docker-sync.yml docker-for-eccube4/Dockerfile docker-for-eccube4/entrypoint.sh ec-cube
 ```
 
 ### DBイメージの選択

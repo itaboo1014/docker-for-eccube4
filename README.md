@@ -18,15 +18,15 @@ git@github.com:itaboo1014/docker-for-eccube4.git
 https://github.com/itaboo1014/docker-for-eccube4.git
 ```
 
-### EC-CUBE4公式のリポジトリをcloneします。
+### EC-CUBE4公式のリポジトリを eccube というディレクトリ名でcloneします。
 ```
 cd docker-for-eccube4
 
 # sshの場合
-git clone git@github.com:EC-CUBE/ec-cube.git
+git clone git@github.com:EC-CUBE/ec-cube.git eccube
 
 # httpsの場合
-git clone https://github.com/EC-CUBE/ec-cube.git
+git clone https://github.com/EC-CUBE/ec-cube.git eccube
 ```
 
 ### DBイメージの選択

@@ -8,14 +8,6 @@
 | phpMyAdmin | localhost:8888 |
 
 ## セットアップ
-### EC-CUBE4公式のリポジトリをcloneします。
-```
-# sshの場合
-git clone git@github.com:EC-CUBE/ec-cube.git
-
-# httpsの場合
-git clone https://github.com/EC-CUBE/ec-cube.git
-```
 
 ### 本リポジトリをcloneします。
 ```
@@ -26,15 +18,20 @@ git@github.com:itaboo1014/docker-for-eccube4.git
 https://github.com/itaboo1014/docker-for-eccube4.git
 ```
 
-### EC-CUBE公式のリポジトリに本リポジトリのファイルをコピー&上書きします。
+### EC-CUBE4公式のリポジトリをcloneします。
 ```
-cp docker-for-eccube4/docker-compose.yml docker-for-eccube4/docker-sync.yml docker-for-eccube4/Dockerfile docker-for-eccube4/entrypoint.sh ec-cube
+cd docker-for-eccube4
+
+# sshの場合
+git clone git@github.com:EC-CUBE/ec-cube.git
+
+# httpsの場合
+git clone https://github.com/EC-CUBE/ec-cube.git
 ```
 
 ### DBイメージの選択
 docker-compose.yml の5~7行目を編集する必要があります。
 ```
-cd ec-cube
 vim docker-compose.yml
 ```
 - Apple Silicon 以外の場合
@@ -60,7 +57,7 @@ image: mysql:5.7 # 変更
 platform: linux/amd6 # 変更4
 ```
 
-- リポジトリに移動しビルドします。
+- ビルドします。
 ```
 HOST_UID=$(id -u) docker-compose up --build
 ```

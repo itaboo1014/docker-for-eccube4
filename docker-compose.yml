@@ -30,7 +30,7 @@ services:
     build: .
     container_name: eccube
     volumes:
-      - .:/var/www/html
+      - ./eccube:/var/www/html
     ports:
       - 8080:80
     stdin_open: true

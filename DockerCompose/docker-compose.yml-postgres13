@@ -1,0 +1,34 @@
+version: "3"
+
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./eccube:/var/www/eccube
+    depends_on:
+      - db
+  db:
+    image: postgres:13
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: &db_name eccube
+      POSTGRES_USER: &db_user db_user
+      POSTGRES_PASSWORD: &db_password db_password
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+  mailcatcher:
+    image: schickling/mailcatcher
+    ports:
+      - 1080:1080
+      - 1025:1025
+    depends_on:
+      - db

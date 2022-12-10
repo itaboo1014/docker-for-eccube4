@@ -28,6 +28,7 @@ services:
       PMA_HOST: db
       PMA_USER: *db_user
       PMA_PASSWORD: *db_password
+      UPLOAD_LIMIT: 1G
     depends_on:
       - db
   mailcatcher:

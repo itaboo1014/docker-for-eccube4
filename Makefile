@@ -1,6 +1,3 @@
-help:
-	@grep "^[a-zA-Z0-9\-]*:" Makefile | grep -v "grep" | sed -e 's/^/make /' | sed -e 's/://'
-
 ECCUBE4.2.0:
 	curl -vOL https://github.com/EC-CUBE/ec-cube/releases/download/4.2.0/eccube-4.2.0.tar.gz
 	tar -zxvf eccube-4.2.0.tar.gz
@@ -133,8 +130,3 @@ Initialization:
 	rm -f docker-compose.yml
 	rm -f Dockerfile
 	@echo "\n\n\nInitialization complete\n"
-
-
-Alpine:
-	ln -s Dockerfiles/Dockerfile-php74-apache-alpine Dockerfile
-	ln -s DockerCompose/docker-compose.yml-mysql57 docker-compose.yml

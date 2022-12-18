@@ -1,0 +1,80 @@
+ARG PHP_VERSION=8.1
+
+FROM alpine:3.17.0
+
+ENV APACHE_DOCUMENT_ROOT /var/www/eccube/
+
+RUN apk update && apk --no-cache add \
+    bash \
+    apache2 \
+    # apache2-ssl \
+    # apache2-http2 \
+    # git \
+    vim \
+    sed \
+
+    # a2enmod \
+    # rewrite \
+    # headers \
+    # ssl \
+
+    # gnupg2 \
+    # libfreetype6-dev \
+    # libicu-dev \
+    # libjpeg62-turbo-dev \
+    # libpng-dev \
+    # libpq-dev \
+    # libzip-dev \
+    # locales \
+    # ssl-cert \
+    # unzip \
+    # zlib1g-dev \
+    # libwebp-dev \
+    # && echo "en_US.UTF-8 UTF-8" >/etc/locale.gen \
+    # && locale-gen \
+    ;
+
+RUN apk add php${PHP_VERSION} && apk --no-cache add \
+    php-fpm${PHP_VERSION} \
+    php-pgsql \
+    php-mysqli \
+    php-pdo_pgsql \
+    php-pdo_mysql \
+    php-pdo \
+    php-phar \
+    php-mbstring \
+    php-zlib \
+    php-ctype \
+    php-session \
+    php-json \
+    php-xml \
+    # php-libxml \
+    php-openssl \
+    php-zip \
+    php-curl \
+    php-fileinfo \
+    php-intl \
+    php-gd \
+    ;
+    
+# RUN pecl install apcu && docker-php-ext-enable apcu
+# RUN pecl install apcu && echo "extension=apcu.so" > /usr/local/etc/php/conf.d/apc.ini
+
+# RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - \
+#     && apk update \
+#     && apk add nodejs \
+#     && apk clean \
+#     ;
+
+RUN sed -ri -e 's!/var/www/localhost/htdocs!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/httpd.conf \
+    # && sed -ri -e 's!/var/www!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/httpd.conf \
+    ;
+
+# RUN a2enmod rewrite headers ssl
+#     # Enable SSL
+#     RUN ln -s /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-enabled/default-ssl.conf
+#     EXPOSE 443
+
+WORKDIR ${APACHE_DOCUMENT_ROOT}
+
+CMD /usr/sbin/httpd -D FOREGROUND

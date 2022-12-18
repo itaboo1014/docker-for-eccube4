@@ -14,7 +14,7 @@ EC-CUBE 4 向けのDocker環境を提供するプロジェクトです。
 | Database  | MySQL      | 5.7 or 8.0          |
 | Database  | SQLite     | not supported       |
 
-使用できるソフトウェアのバージョンはマイナーバージョンによって異なります。
+使用できるソフトウェアのバージョンはEC-CUBE 4系ののマイナーバージョンによって異なります。
 詳細は公式ドキュメントの[システム要件](https://doc4.ec-cube.net/quickstart/requirement)をご確認ください。
 
 
@@ -23,6 +23,19 @@ EC-CUBE 4 向けのDocker環境を提供するプロジェクトです。
 ## はじめに
 
 前提として [Docker Desktop](https://www.docker.com/products/docker-desktop/) をインストールして下さい。
+
+## プロジェクトのクローン
+
+当プロジェクトをクローンします。
+
+```
+git clone git clone https://github.com/itaboo1014/docker-for-eccube4.git
+```
+
+クローンしたプロジェクトディレクトリに移動します。
+```
+cd docker-for-eccube4
+```
 
 ## ECCUBEのソースを配置
 

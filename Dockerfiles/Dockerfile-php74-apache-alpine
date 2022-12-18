@@ -1,4 +1,4 @@
-ARG PHP_VERSION=7.4
+ARG PHP_VERSION=8.1
 
 FROM alpine:3.17.0
 
@@ -7,9 +7,17 @@ ENV APACHE_DOCUMENT_ROOT /var/www/eccube/
 RUN apk update && apk --no-cache add \
     bash \
     apache2 \
+    # apache2-ssl \
+    # apache2-http2 \
     # git \
     vim \
     sed \
+
+    # a2enmod \
+    # rewrite \
+    # headers \
+    # ssl \
+
     # gnupg2 \
     # libfreetype6-dev \
     # libicu-dev \
@@ -58,15 +66,14 @@ RUN apk add php${PHP_VERSION} && apk --no-cache add \
 #     && apk clean \
 #     ;
 
-
-RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf \
-    && sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf \
+RUN sed -ri -e 's!/var/www/localhost/htdocs!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/httpd.conf \
+    # && sed -ri -e 's!/var/www!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/httpd.conf \
     ;
 
-RUN a2enmod rewrite headers ssl
-    # Enable SSL
-    RUN ln -s /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-enabled/default-ssl.conf
-    EXPOSE 443
+# RUN a2enmod rewrite headers ssl
+#     # Enable SSL
+#     RUN ln -s /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-enabled/default-ssl.conf
+#     EXPOSE 443
 
 WORKDIR ${APACHE_DOCUMENT_ROOT}
 

@@ -30,7 +30,7 @@ EC-CUBE 4系 向けのDocker環境を提供するプロジェクトです。
 当プロジェクトをクローンします。
 
 ```
-git clone git clone https://github.com/itaboo1014/docker-for-eccube4.git
+git clone https://github.com/itaboo1014/docker-for-eccube4.git
 ```
 
 クローンしたプロジェクトディレクトリに移動します。

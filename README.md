@@ -98,7 +98,7 @@ PostgreSQL10
 PostgreSQL9
 ```
 
-## イメージビルド＆コンテナの立ち上げ
+## イメージビルド＆コンテナの起動
 アプリケーションコンテナのイメージを作成します。
 ```
 docker-compose build app

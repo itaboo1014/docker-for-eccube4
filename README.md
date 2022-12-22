@@ -4,13 +4,16 @@ EC-CUBE 4系 向けのDocker環境を提供するプロジェクトです。
 
 当プロジェクトのサポート内容は下記の通りです。
 
-| 分類       | ソフトウェア | バージョン                |
-|:----------|:-----------|:------------------------|
-| WebServer | Apache     | 2.4.x                   |
-| PHP       | PHP        | 7.1 ~ 7.4, 8.0 ~ 8.1    |
-| Database  | PostgreSQL | 9.x ~ 14.x              |
-| Database  | MySQL      | 5.7 or 8.0              |
-| Database  | SQLite     | not supported           |
+| 分類       | ソフトウェア           | バージョン                |
+|:----------|:---------------------|:------------------------|
+| WebServer | Apache               | 2.4.x                   |
+| PHP       | PHP                  | 7.1 ~ 7.4, 8.0 ~ 8.1    |
+| Database  | PostgreSQL           | 9.x ~ 14.x              |
+| Database  | MySQL                | 5.7 or 8.0              |
+| Database  | SQLite               | not supported           |
+| DBMS      | Adminer (PostgreSQL) |                         |
+| DBMS      | phpMyAdmin (MySQL)   |                         |
+| Others    | MailCatcher          |                         |
 
 使用できるソフトウェアのバージョンはEC-CUBE 4系 のマイナーバージョンによって異なります。
 詳細は公式ドキュメントの[システム要件](https://doc4.ec-cube.net/quickstart/requirement)をご確認ください。
@@ -105,6 +108,15 @@ docker-compose build app
 docker-compose up
 ```
 
+## ブラウジング
+
+| Front       | Browsing              |
+|:------------|:----------------------|
+| ECCUBE      | http://localhost      |
+| phpMyAdmin  | http://localhost:8080 |
+| Adminer     | http://localhost:8080 |
+| MailCatcher | http://localhost:1080 |
+
 ## 初期化
 
 下記コマンドで作成した環境を初期化することができます。
@@ -124,10 +136,14 @@ make Initialization
 make
 ```
 
-## ブラウジング
+## データベースの設定情報
 
-| Front       | Browsing              |
-|:------------|:----------------------|
-| ECCUBE      | http://localhost      |
-| phpMyAdmin  | http://localhost:8080 |
-| MailCatcher | http://localhost:1080 |
+|               | MySQL         | PostgreSQL    |
+|:--------------|:--------------|:--------------|
+| database      | `eccube`      | `eccube`      |
+| host          | `db`          | `db`          |
+| port          | `3306`        | `5432`        |
+| user          | `db_user`     | `db_user`     |
+| password      | `db_password` | `db_password` |
+| root password | `db_password` |               |
+| DBMS          | phpMyAdmin    | Adminer       |

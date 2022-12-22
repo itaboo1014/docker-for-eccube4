@@ -1,20 +1,18 @@
 # Docker for EC-CUBE 4
 
-EC-CUBE 4 向けのDocker環境を提供するプロジェクトです。
-
-前提として
+EC-CUBE 4系 向けのDocker環境を提供するプロジェクトです。
 
 当プロジェクトのサポート内容は下記の通りです。
 
-| 分類       | ソフトウェア | バージョン            |
-|:----------|:-----------|:--------------------|
-| WebServer | Apache     | 2.4.x               |
-| PHP       | PHP        | 7.1~7.4 or 8.0~8.1  |
-| Database  | PostgreSQL | 9.x~14.x            |
-| Database  | MySQL      | 5.7 or 8.0          |
-| Database  | SQLite     | not supported       |
+| 分類       | ソフトウェア | バージョン                |
+|:----------|:-----------|:------------------------|
+| WebServer | Apache     | 2.4.x                   |
+| PHP       | PHP        | 7.1 ~ 7.4, 8.0 ~ 8.1    |
+| Database  | PostgreSQL | 9.x ~ 14.x              |
+| Database  | MySQL      | 5.7 or 8.0              |
+| Database  | SQLite     | not supported           |
 
-使用できるソフトウェアのバージョンはEC-CUBE 4系ののマイナーバージョンによって異なります。
+使用できるソフトウェアのバージョンはEC-CUBE 4系 のマイナーバージョンによって異なります。
 詳細は公式ドキュメントの[システム要件](https://doc4.ec-cube.net/quickstart/requirement)をご確認ください。
 
 
@@ -45,7 +43,7 @@ EC-CUBEのバージョンを指定し、ソースコードをダウンロード�
 ```
 make ECCUBE4.2.0
 ```
-対応しているバージョンは下記の通りです。
+当プロジェクトで提供しているバージョンは下記の通りです。
 ```
 ECCUBE4.2.0
 ECCUBE4.1.2
@@ -63,14 +61,11 @@ ECCUBE4.0.3
 
 使用するPHPのバージョンを指定します。
 
-※[システム要件](https://doc4.ec-cube.net/quickstart/requirement)を参考に
-EC-CUBEの各バージョンに対応したPHPを選択して下さい。
-
 ：例 PHP 8.1 の場合
 ```
 make PHP8.1
 ```
-対応しているバージョンは下記の通りです。
+当プロジェクトで提供しているバージョンは下記の通りです。
 ```
 PHP8.1
 PHP8.0
@@ -84,14 +79,11 @@ PHP7.1
 
 使用するデータベースとバージョンを指定します。
 
-※[システム要件](https://doc4.ec-cube.net/quickstart/requirement)を参考に
-EC-CUBEの各バージョンに対応したデータベースとバージョンを選択して下さい。
-
 ：例 MySQL 8.0 の場合
 ```
 make MySQL8.0
 ```
-対応しているデータベースとバージョンは下記の通りです。
+当プロジェクトで提供しているデータベースとバージョンは下記の通りです。
 ```
 MySQL8.0
 MySQL5.7
@@ -104,11 +96,11 @@ PostgreSQL9
 ```
 
 ## イメージビルド＆コンテナの立ち上げ
-アプリケーションのイメージを作成します。
+アプリケーションコンテナのイメージを作成します。
 ```
 docker-compose build app
 ```
-全てのコンテナを立ち上げます。
+全てのコンテナを起動します。
 ```
 docker-compose up
 ```

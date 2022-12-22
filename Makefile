@@ -1,3 +1,6 @@
+help:
+	@grep "^[0-9a-zA-Z\-\.]*:" Makefile | grep -v "grep" | sed -e 's/^/make /' | sed -e 's/://'
+
 ECCUBE4.2.0:
 	curl -vOL https://github.com/EC-CUBE/ec-cube/releases/download/4.2.0/eccube-4.2.0.tar.gz
 	tar -zxvf eccube-4.2.0.tar.gz

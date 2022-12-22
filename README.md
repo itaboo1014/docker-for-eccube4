@@ -117,6 +117,13 @@ make Initialization
 - `docker-compose.yml`の削除
 - `Dockerfile`の削除
 
+## 実行できるmakeコマンドの確認
+
+下記コマンドで実行できるmakeコマンドを確認することができます。
+```
+make
+```
+
 ## ブラウジング
 
 | Front       | Browsing              |

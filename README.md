@@ -108,15 +108,6 @@ docker-compose build app
 docker-compose up
 ```
 
-## ブラウジング
-
-| Front       | Browsing              |
-|:------------|:----------------------|
-| ECCUBE      | http://localhost      |
-| phpMyAdmin  | http://localhost:8080 |
-| Adminer     | http://localhost:8080 |
-| MailCatcher | http://localhost:1080 |
-
 ## 初期化
 
 下記コマンドで作成した環境を初期化することができます。
@@ -129,7 +120,7 @@ make Initialization
 - `docker-compose.yml`の削除
 - `Dockerfile`の削除
 
-## 実行できるmakeコマンドの確認
+## 実行できるmakeコマンド
 
 下記コマンドで実行できるmakeコマンドを確認することができます。
 ```
@@ -147,3 +138,12 @@ make
 | password      | `db_password` | `db_password` |
 | root password | `db_password` |               |
 | DBMS          | phpMyAdmin    | Adminer       |
+
+## ブラウジング
+
+| Front                   | Browsing              |
+|:------------------------|:----------------------|
+| ECCUBE                  | http://localhost      |
+| Adminer (PostgreSQL)    | http://localhost:8080 |
+| phpMyAdmin (MySQL)      | http://localhost:8080 |
+| MailCatcher             | http://localhost:1080 |

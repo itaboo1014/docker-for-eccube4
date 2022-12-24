@@ -1,5 +1,19 @@
 # Docker for EC-CUBE 4
 
+- [はじめに](#introduction)
+- [HOW TO USE](#howtouse)
+    - [プロジェクトのクローン](#clone)
+    - [EC-CUBEのソースを配置](#source)
+    - [PHPのバージョンを選択](#php)
+    - [データベースの選択](#db)
+    - [イメージビルド＆コンテナの起動](#build)
+    - [初期化](#init)
+- [実行できるmakeコマンド](#make)
+- [データベースの設定情報](#db_info)
+- [ブラウジング](#browse)
+
+# はじめに<a id="introduction"></a>
+
 EC-CUBE 4系 向けのDocker環境を提供するプロジェクトです。
 
 当プロジェクトのサポート内容は下記の通りです。
@@ -19,13 +33,11 @@ EC-CUBE 4系 向けのDocker環境を提供するプロジェクトです。
 詳細は公式ドキュメントの[システム要件](https://doc4.ec-cube.net/quickstart/requirement)をご確認ください。
 
 
-# HOW TO USE
-
-## はじめに
+# HOW TO USE<a id="howtouse"></a>
 
 前提として [Docker Desktop](https://www.docker.com/products/docker-desktop/) をインストールして下さい。
 
-## プロジェクトのクローン
+## プロジェクトのクローン<a id="clone"></a>
 
 当プロジェクトをクローンします。
 
@@ -38,7 +50,7 @@ git clone https://github.com/itaboo1014/docker-for-eccube4.git
 cd docker-for-eccube4
 ```
 
-## ECCUBEのソースを配置
+## EC-CUBEのソースを配置<a id="source"></a>
 
 EC-CUBEのバージョンを指定し、ソースコードをダウンロードします。
 
@@ -60,7 +72,7 @@ ECCUBE4.0.4
 ECCUBE4.0.3
 ```
 
-## PHPのバージョンを選択
+## PHPのバージョンを選択<a id="php"></a>
 
 使用するPHPのバージョンを指定します。
 
@@ -78,7 +90,7 @@ PHP7.2
 PHP7.1
 ```
 
-## データベースの選択
+## データベースの選択<a id="db"></a>
 
 使用するデータベースとバージョンを指定します。
 
@@ -98,7 +110,7 @@ PostgreSQL10
 PostgreSQL9
 ```
 
-## イメージビルド＆コンテナの起動
+## イメージビルド＆コンテナの起動<a id="build"></a>
 アプリケーションコンテナのイメージを作成します。
 ```
 docker-compose build app
@@ -108,9 +120,9 @@ docker-compose build app
 docker-compose up
 ```
 
-## 初期化
+## 初期化<a id="init"></a>
 
-下記コマンドで作成した環境を初期化することができます。
+下記コマンドで構築した環境を初期化することができます。
 ```
 make Initialization
 ```
@@ -120,14 +132,14 @@ make Initialization
 - `docker-compose.yml`の削除
 - `Dockerfile`の削除
 
-## 実行できるmakeコマンド
+# 実行できるmakeコマンド<a id="make"></a>
 
 下記コマンドで実行可能なmakeコマンドを確認することができます。
 ```
 make
 ```
 
-## データベースの設定情報
+# データベースの設定情報<a id="db_info"></a>
 
 |               | MySQL         | PostgreSQL    |
 |:--------------|:--------------|:--------------|
@@ -139,7 +151,7 @@ make
 | root password | `db_password` |               |
 | DBMS          | phpMyAdmin    | Adminer       |
 
-## ブラウジング
+# ブラウジング<a id="browse"></a>
 
 | Front                   | Browsing              |
 |:------------------------|:----------------------|

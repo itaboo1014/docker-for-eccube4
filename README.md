@@ -12,7 +12,10 @@
 - [データベースの設定情報](#db_info)
 - [ブラウジング](#browse)
 
-# はじめに<a id="introduction"></a>
+
+
+<a id="introduction"></a>
+# はじめに
 
 EC-CUBE 4系 向けのDocker環境を提供するプロジェクトです。
 
@@ -33,11 +36,15 @@ EC-CUBE 4系 向けのDocker環境を提供するプロジェクトです。
 詳細は公式ドキュメントの[システム要件](https://doc4.ec-cube.net/quickstart/requirement)をご確認ください。
 
 
-# HOW TO USE<a id="howtouse"></a>
+
+<a id="howtouse"></a>
+# HOW TO USE
 
 前提として [Docker Desktop](https://www.docker.com/products/docker-desktop/) をインストールして下さい。
 
-## プロジェクトのクローン<a id="clone"></a>
+
+<a id="clone"></a>
+## プロジェクトのクローン
 
 当プロジェクトをクローンします。
 
@@ -50,7 +57,9 @@ git clone https://github.com/itaboo1014/docker-for-eccube4.git
 cd docker-for-eccube4
 ```
 
-## EC-CUBEのソースを配置<a id="source"></a>
+
+<a id="source"></a>
+## EC-CUBEのソースを配置
 
 EC-CUBEのバージョンを指定し、ソースコードをダウンロードします。
 
@@ -72,7 +81,9 @@ ECCUBE4.0.4
 ECCUBE4.0.3
 ```
 
-## PHPのバージョンを選択<a id="php"></a>
+
+<a id="php"></a>
+## PHPのバージョンを選択
 
 使用するPHPのバージョンを指定します。
 
@@ -90,7 +101,9 @@ PHP7.2
 PHP7.1
 ```
 
-## データベースの選択<a id="db"></a>
+
+<a id="db"></a>
+## データベースの選択
 
 使用するデータベースとバージョンを指定します。
 
@@ -110,7 +123,9 @@ PostgreSQL10
 PostgreSQL9
 ```
 
-## イメージビルド＆コンテナの起動<a id="build"></a>
+
+<a id="build"></a>
+## イメージビルド＆コンテナの起動
 アプリケーションコンテナのイメージを作成します。
 ```
 docker-compose build app
@@ -120,7 +135,9 @@ docker-compose build app
 docker-compose up
 ```
 
-## 初期化<a id="init"></a>
+
+<a id="init"></a>
+## 初期化
 
 下記コマンドで構築した環境を初期化することができます。
 ```
@@ -132,14 +149,20 @@ make Initialization
 - `docker-compose.yml`の削除
 - `Dockerfile`の削除
 
-# 実行できるmakeコマンド<a id="make"></a>
+
+
+<a id="make"></a>
+# 実行できるmakeコマンド
 
 下記コマンドで実行可能なmakeコマンドを確認することができます。
 ```
 make
 ```
 
-# データベースの設定情報<a id="db_info"></a>
+
+
+<a id="db_info"></a>
+# データベースの設定情報
 
 |               | MySQL         | PostgreSQL    |
 |:--------------|:--------------|:--------------|
@@ -151,7 +174,10 @@ make
 | root password | `db_password` |               |
 | DBMS          | phpMyAdmin    | Adminer       |
 
-# ブラウジング<a id="browse"></a>
+
+
+<a id="browse"></a>
+# ブラウジング
 
 | Front                   | Browsing              |
 |:------------------------|:----------------------|

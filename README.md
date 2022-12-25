@@ -145,7 +145,8 @@ make Initialization
 ```
 内部の処理は下記の通りです。
 - コンテナの停止＆削除
-- `eccube`ディレクトリの削除
+- ソースコード（`eccube`ディレクトリ）の削除
+- 永続化されたデータベースの情報を削除
 - `docker-compose.yml`の削除
 - `Dockerfile`の削除
 

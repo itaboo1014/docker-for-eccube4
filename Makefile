@@ -129,7 +129,8 @@ PostgreSQL9:
 
 Initialization:
 	-@docker-compose down
-	rm -rf eccube
+	sudo rm -rf eccube
+	sudo rm -rf root/var
 	rm -f docker-compose.yml
 	rm -f Dockerfile
 	@echo "\n\n\nInitialized\n\n\n"

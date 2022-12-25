@@ -9,6 +9,7 @@ services:
       - 443:443
     volumes:
       - ./eccube:/var/www/eccube
+      - ./root/usr/local/etc/php/php.ini:/usr/local/etc/php/php.ini
     depends_on:
       - db
   db:
@@ -20,6 +21,8 @@ services:
       MYSQL_DATABASE: &db_name eccube
       MYSQL_USER: &db_user db_user
       MYSQL_PASSWORD: *db_password
+    volumes:
+      - ./root/var/lib/mysql:/var/lib/mysql
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     ports:

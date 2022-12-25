@@ -1,3 +1,6 @@
+.DS_Store
 /eccube/
-docker-compose.yml
-Dockerfile
+/docker-compose.yml
+/Dockerfile
+/root
+!/root/usr/local/etc/php/php.ini

@@ -1,5 +1,5 @@
 help:
-	@grep "^[0-9a-zA-Z\-\.]*:" Makefile | grep -v "grep" | sed -e 's/^/make /' | sed -e 's/://'
+	@grep "^[0-9a-zA-Z\.\-]*:" Makefile | grep -v "grep" | sed -e 's/^/make /' | sed -e 's/://'
 
 ECCUBE4.2.0:
 	curl -vOL https://github.com/EC-CUBE/ec-cube/releases/download/4.2.0/eccube-4.2.0.tar.gz
@@ -7,6 +7,16 @@ ECCUBE4.2.0:
 	mv ec-cube eccube
 	rm eccube-4.2.0.tar.gz
 	@echo "\n\n\nECCUBE4.2.0 Download Complete!!!\n\n\n"
+
+ECCUBE4.2.0-latest:
+	curl -vOL https://github.com/EC-CUBE/ec-cube/releases/download/4.2.0/eccube-4.2.0.tar.gz
+	tar -zxvf eccube-4.2.0.tar.gz
+	mv ec-cube eccube
+	rm eccube-4.2.0.tar.gz
+	@echo "\n\n\nECCUBE4.2.0 Download Complete!!!\n\n\n"
+	make PHP8.1
+	make MySQL8.0
+	@echo "\n\n\nECCUBE4.2.0-PHP8.1-MySQL8.0 Setup Complete!!!\n\n\n"
 
 ECCUBE4.1.2:
 	curl -vOL https://github.com/EC-CUBE/ec-cube/releases/download/4.1.2/eccube-4.1.2.tar.gz

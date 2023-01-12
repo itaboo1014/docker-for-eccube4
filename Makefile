@@ -25,6 +25,16 @@ ECCUBE4.1.2:
 	rm eccube-4.1.2.tar.gz
 	@echo "\n\n\nECCUBE4.1.2 Download Complete!!!\n\n\n"
 
+ECCUBE4.1.2-latest:
+	curl -vOL https://github.com/EC-CUBE/ec-cube/releases/download/4.1.2/eccube-4.1.2.tar.gz
+	tar -zxvf eccube-4.1.2.tar.gz
+	mv ec-cube eccube
+	rm eccube-4.1.2.tar.gz
+	@echo "\n\n\nECCUBE4.1.2 Download Complete!!!\n\n\n"
+	make PHP7.4
+	make MySQL5.7
+	@echo "\n\n\nECCUBE4.1.2-PHP7.4-MySQL5.7 Setup Complete!!!\n\n\n"
+
 ECCUBE4.1.1:
 	curl -vOL https://github.com/EC-CUBE/ec-cube/releases/download/4.1.1/eccube-4.1.1.tar.gz
 	tar -zxvf eccube-4.1.1.tar.gz
@@ -32,13 +42,33 @@ ECCUBE4.1.1:
 	rm eccube-4.1.1.tar.gz
 	@echo "\n\n\nECCUBE4.1.1 Download Complete!!!\n\n\n"
 
+ECCUBE4.1.1-latest:
+	curl -vOL https://github.com/EC-CUBE/ec-cube/releases/download/4.1.1/eccube-4.1.1.tar.gz
+	tar -zxvf eccube-4.1.1.tar.gz
+	mv ec-cube eccube
+	rm eccube-4.1.1.tar.gz
+	@echo "\n\n\nECCUBE4.1.1 Download Complete!!!\n\n\n"
+	make PHP7.4
+	make MySQL5.7
+	@echo "\n\n\nECCUBE4.1.1-PHP7.4-MySQL5.7 Setup Complete!!!\n\n\n"
+
 ECCUBE4.1.0:
 	curl -vOL https://github.com/EC-CUBE/ec-cube/releases/download/4.1.0/eccube-4.1.0.tar.gz
 	tar -zxvf eccube-4.1.0.tar.gz
 	mv ec-cube eccube
 	rm eccube-4.1.0.tar.gz
 	@echo "\n\n\nECCUBE4.1.0 Download Complete!!!\n\n\n"
-	
+
+ECCUBE4.1.0-latest:
+	curl -vOL https://github.com/EC-CUBE/ec-cube/releases/download/4.1.0/eccube-4.1.0.tar.gz
+	tar -zxvf eccube-4.1.0.tar.gz
+	mv ec-cube eccube
+	rm eccube-4.1.0.tar.gz
+	@echo "\n\n\nECCUBE4.1.0 Download Complete!!!\n\n\n"
+	make PHP7.4
+	make MySQL5.7
+	@echo "\n\n\nECCUBE4.1.0-PHP7.4-MySQL5.7 Setup Complete!!!\n\n\n"
+
 ECCUBE4.0.6-p1:
 	curl -vOL https://github.com/EC-CUBE/ec-cube/releases/download/4.0.6-p1/eccube-4.0.6-p1.tar.gz
 	tar -zxvf eccube-4.0.6-p1.tar.gz

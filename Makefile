@@ -168,7 +168,7 @@ PostgreSQL9:
 	@echo "\n\n\nPostgreSQL9 Setup Complete!!!\n\n\n"
 
 Initialization:
-	-@docker-compose down
+	-@docker-compose down -v
 	sudo rm -rf eccube
 	sudo rm -rf root/var
 	rm -f docker-compose.yml

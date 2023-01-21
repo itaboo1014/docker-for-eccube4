@@ -44,13 +44,11 @@ RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - \
     && apt clean \
     ;
 
-
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf \
     && sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf \
     ;
 
 RUN a2enmod rewrite headers ssl
-    # Enable SSL
     RUN ln -s /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-enabled/default-ssl.conf
     EXPOSE 443
 

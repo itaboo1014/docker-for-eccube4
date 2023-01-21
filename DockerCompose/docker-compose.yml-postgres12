@@ -24,7 +24,7 @@ services:
       POSTGRES_USER: &db_user db_user
       POSTGRES_PASSWORD: &db_password db_password
     volumes:
-      - ./root/var/lib/postgresql/data:/var/lib/postgresql/data
+      - eccube_db:/var/lib/postgresql/data
   adminer:
     image: adminer
     ports:
@@ -41,3 +41,4 @@ services:
 volumes:
   eccube_var:
   eccube_node_modules:
+  eccube_db:

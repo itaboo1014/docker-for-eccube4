@@ -10,6 +10,7 @@ services:
     volumes:
       - ./eccube:/var/www/eccube
       - ./root/usr/local/etc/php/php.ini:/usr/local/etc/php/php.ini
+      - eccube_var:/var/www/eccube/var
     depends_on:
       - db
   db:
@@ -35,3 +36,5 @@ services:
       - 1025:1025
     depends_on:
       - db
+volumes:
+  eccube_var:

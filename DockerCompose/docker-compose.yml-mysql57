@@ -25,7 +25,7 @@ services:
       MYSQL_USER: &db_user db_user
       MYSQL_PASSWORD: *db_password
     volumes:
-      - ./root/var/lib/mysql:/var/lib/mysql
+      - eccube_db:/var/lib/mysql
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     ports:
@@ -47,3 +47,4 @@ services:
 volumes:
   eccube_var:
   eccube_node_modules:
+  eccube_db:

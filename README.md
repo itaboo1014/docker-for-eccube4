@@ -11,6 +11,7 @@
 - [実行できるmakeコマンド](#make)
 - [データベースの設定情報](#db_info)
 - [ブラウジング](#browse)
+- [インストール時のエラー](#error)
 
 
 
@@ -186,3 +187,29 @@ make
 | Adminer (PostgreSQL)    | http://localhost:8080 |
 | phpMyAdmin (MySQL)      | http://localhost:8080 |
 | MailCatcher             | http://localhost:1080 |
+
+
+<a id="error"></a>
+# インストール時のエラー
+
+コンテナ起動後、フロントアクセス時に下記のエラーが発生するケースがあります。
+
+```
+Fatal error: Uncaught RuntimeException: Unable to create the "cache" directory
+```
+
+`var` ディレクトリのパーミッションのが正しく設定されていないことで発生するエラーです。
+下記の方法で `var` ディレクトリに正しいパーミッションを設定して下さい。
+
+
+## appコンテナ内に接続
+
+```
+docker-compose exec app /bin/bash
+```
+
+## varディレクトリのパーミッションを変更
+
+```
+chown -R www-data:www-data var
+```

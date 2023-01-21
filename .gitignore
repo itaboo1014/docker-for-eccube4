@@ -4,3 +4,4 @@
 /Dockerfile
 /root
 !/root/usr/local/etc/php/php.ini
+!/root/root/.bashrc

@@ -10,6 +10,7 @@ services:
     volumes:
       - ./eccube:/var/www/eccube
       - ./root/usr/local/etc/php/php.ini:/usr/local/etc/php/php.ini
+      - ./root/root/.bashrc:/root/.bashrc
       - eccube_var:/var/www/eccube/var
     depends_on:
       - db

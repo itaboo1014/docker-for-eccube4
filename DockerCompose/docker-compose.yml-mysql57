@@ -12,6 +12,7 @@ services:
       - ./root/usr/local/etc/php/php.ini:/usr/local/etc/php/php.ini
       - ./root/root/.bashrc:/root/.bashrc
       - eccube_var:/var/www/eccube/var
+      - eccube_node_modules:/var/www/eccube/node_modules
     depends_on:
       - db
   db:
@@ -45,3 +46,4 @@ services:
       - db
 volumes:
   eccube_var:
+  eccube_node_modules:

@@ -5,3 +5,4 @@
 /root
 !/root/usr/local/etc/php/php.ini
 !/root/root/.bashrc
+!/root/root/.vimrc

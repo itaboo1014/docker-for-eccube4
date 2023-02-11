@@ -4,6 +4,7 @@ services:
   app:
     build:
       context: .
+    hostname: 'local'
     ports:
       - 80:80
       - 443:443

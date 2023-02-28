@@ -70,6 +70,7 @@ make ECCUBE4.2.0
 ```
 当プロジェクトで提供しているバージョンは下記の通りです。
 ```
+ECCUBE4.2.1
 ECCUBE4.2.0
 ECCUBE4.1.2
 ECCUBE4.1.1

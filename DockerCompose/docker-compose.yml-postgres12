@@ -12,7 +12,7 @@ services:
       - ./eccube:/var/www/eccube
       - ./root/usr/local/etc/php/php.ini:/usr/local/etc/php/php.ini
       - ./root/root/.bashrc:/root/.bashrc
-      - ./root/root/.bashrc:/root/.vimrc
+      - ./root/root/.vimrc:/root/.vimrc
       - eccube_var:/var/www/eccube/var
       - eccube_node_modules:/var/www/eccube/node_modules
     depends_on:

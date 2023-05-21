@@ -53,3 +53,6 @@ RUN a2enmod rewrite headers ssl
     EXPOSE 443
 
 WORKDIR ${APACHE_DOCUMENT_ROOT}
+
+COPY docker-entrypoint.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh

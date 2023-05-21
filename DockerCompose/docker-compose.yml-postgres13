@@ -17,6 +17,7 @@ services:
       - eccube_node_modules:/var/www/eccube/node_modules
     depends_on:
       - db
+    entrypoint: /usr/local/bin/docker-entrypoint.sh
   db:
     image: postgres:13
     ports:

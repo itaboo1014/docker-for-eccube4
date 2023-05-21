@@ -1,0 +1,55 @@
+ARG PHP_VERSION=8.2
+
+FROM php:${PHP_VERSION}-apache-bullseye
+
+ENV APACHE_DOCUMENT_ROOT /var/www/eccube/
+
+RUN apt update && apt install -y --no-install-recommends \
+    apt-transport-https \
+    apt-utils \
+    build-essential \
+    curl \
+    debconf-utils \
+    gcc \
+    git \
+    vim \
+    gnupg2 \
+    libfreetype6-dev \
+    libicu-dev \
+    libjpeg62-turbo-dev \
+    libpng-dev \
+    libpq-dev \
+    libzip-dev \
+    locales \
+    ssl-cert \
+    unzip \
+    zlib1g-dev \
+    libwebp-dev \
+    && apt clean \
+    && rm -rf /var/lib/apt/lists/* \
+    && echo "en_US.UTF-8 UTF-8" >/etc/locale.gen \
+    && locale-gen \
+    ;
+
+RUN docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp \
+    && docker-php-ext-install -j$(nproc) zip gd mysqli pdo_mysql opcache intl pgsql pdo_pgsql \
+    ;
+
+RUN pecl install apcu && echo "extension=apcu.so" > /usr/local/etc/php/conf.d/apc.ini
+
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - \
+    && apt update \
+    && apt install -y nodejs \
+    && apt clean \
+    ;
+
+RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf \
+    && sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf \
+    ;
+
+RUN a2enmod rewrite headers ssl
+    RUN ln -s /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-enabled/default-ssl.conf
+    EXPOSE 443
+
+WORKDIR ${APACHE_DOCUMENT_ROOT}

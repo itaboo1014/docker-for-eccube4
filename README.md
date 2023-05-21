@@ -26,7 +26,7 @@ EC-CUBE 4系 向けのDocker環境を提供するプロジェクトです。
 | 分類       | ソフトウェア           | バージョン                |
 |:----------|:---------------------|:------------------------|
 | WebServer | Apache               | 2.4.x                   |
-| PHP       | PHP                  | 7.1 ~ 7.4, 8.0 ~ 8.1    |
+| PHP       | PHP                  | 7.1 ~ 7.4, 8.0 ~ 8.2    |
 | Database  | PostgreSQL           | 9.x ~ 14.x              |
 | Database  | MySQL                | 5.7 or 8.0              |
 | Database  | SQLite               | not supported           |
@@ -96,6 +96,7 @@ make PHP8.1
 ```
 当プロジェクトで提供しているバージョンは下記の通りです。
 ```
+PHP8.2
 PHP8.1
 PHP8.0
 PHP7.4

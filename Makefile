@@ -128,6 +128,10 @@ ECCUBE4.0.3:
 	rm 4.0.3.tar.gz
 	@echo "\n\n\nECCUBE4.0.3 Download Complete!!!\n\n\n"
 
+PHP8.2:
+	ln -s Dockerfiles/Dockerfile-php82-apache-bullseye Dockerfile
+	@echo "\n\n\nPHP8.2 Setup Complete!!!\n\n\n"
+
 PHP8.1:
 	ln -s Dockerfiles/Dockerfile-php81-apache-bullseye Dockerfile
 	@echo "\n\n\nPHP8.1 Setup Complete!!!\n\n\n"

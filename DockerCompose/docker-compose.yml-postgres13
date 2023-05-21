@@ -17,7 +17,7 @@ services:
       - eccube_node_modules:/var/www/eccube/node_modules
     depends_on:
       - db
-    entrypoint: /usr/local/bin/docker-entrypoint.sh
+    command: "/bin/bash -c 'if [ ! -f /var/www/eccube/.initialized ]; then chown -R www-data: /var/www/eccube && touch /var/www/eccube/.initialized; fi && apache2-foreground'"
   db:
     image: postgres:13
     ports:

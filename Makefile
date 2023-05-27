@@ -6,189 +6,289 @@ EC-CUBE4.2.1:
 	tar -zxvf eccube-4.2.1.tar.gz
 	mv ec-cube eccube
 	rm eccube-4.2.1.tar.gz
-	@echo "\n\n\nECCUBE4.2.1 Download Complete!!!\n\n\n"
+	@echo "\n\n\nEC-CUBE4.2.1 Download Complete!!!\n\n\n"
 
 EC-CUBE4.2.1-latest:
 	curl -vOL https://downloads.ec-cube.net/src/eccube-4.2.1.tar.gz
 	tar -zxvf eccube-4.2.1.tar.gz
 	mv ec-cube eccube
 	rm eccube-4.2.1.tar.gz
-	@echo "\n\n\nECCUBE4.2.1 Download Complete!!!\n\n\n"
+	@echo "\n\n\nEC-CUBE4.2.1 Download Complete!!!\n\n\n"
 	make PHP8.1
 	make MySQL8.0
-	@echo "\n\n\nECCUBE4.2.1-PHP8.1-MySQL8.0 Setup Complete!!!\n\n\n"
+	@echo "\n\n\nPHP8.1 MySQL8.0 Setup Complete!!!\n\n\n"
 
 EC-CUBE4.2.0:
 	curl -vOL https://downloads.ec-cube.net/src/eccube-4.2.0.tar.gz
 	tar -zxvf eccube-4.2.0.tar.gz
 	mv ec-cube eccube
 	rm eccube-4.2.0.tar.gz
-	@echo "\n\n\nECCUBE4.2.0 Download Complete!!!\n\n\n"
+	@echo "\n\n\nEC-CUBE4.2.0 Download Complete!!!\n\n\n"
 
 EC-CUBE4.2.0-latest:
 	curl -vOL https://downloads.ec-cube.net/src/eccube-4.2.0.tar.gz
 	tar -zxvf eccube-4.2.0.tar.gz
 	mv ec-cube eccube
 	rm eccube-4.2.0.tar.gz
-	@echo "\n\n\nECCUBE4.2.0 Download Complete!!!\n\n\n"
+	@echo "\n\n\nEC-CUBE4.2.0 Download Complete!!!\n\n\n"
 	make PHP8.1
 	make MySQL8.0
-	@echo "\n\n\nECCUBE4.2.0-PHP8.1-MySQL8.0 Setup Complete!!!\n\n\n"
+	@echo "\n\n\nPHP8.1 MySQL8.0 Setup Complete!!!\n\n\n"
 
 EC-CUBE4.1.2-p2:
 	curl -vOL https://downloads.ec-cube.net/src/eccube-4.1.2-p2.tar.gz
 	tar -zxvf eccube-4.1.2-p2.tar.gz
 	mv ec-cube eccube
 	rm eccube-4.1.2-p2.tar.gz
-	@echo "\n\n\nECCUBE4.1.2-p2 Download Complete!!!\n\n\n"
+	@echo "\n\n\nEC-CUBE4.1.2-p2 Download Complete!!!\n\n\n"
 
 EC-CUBE4.1.2-p2-latest:
 	curl -vOL https://downloads.ec-cube.net/src/eccube-4.1.2-p2.tar.gz
 	tar -zxvf eccube-4.1.2-p2.tar.gz
 	mv ec-cube eccube
 	rm eccube-4.1.2-p2.tar.gz
-	@echo "\n\n\nECCUBE4.1.2-p2 Download Complete!!!\n\n\n"
+	@echo "\n\n\nEC-CUBE4.1.2-p2 Download Complete!!!\n\n\n"
 	make PHP7.4
 	make MySQL5.7
-	@echo "\n\n\nECCUBE4.1.2-p2-PHP7.4-MySQL5.7 Setup Complete!!!\n\n\n"
+	@echo "\n\n\nPHP7.4 MySQL5.7 Setup Complete!!!\n\n\n"
 
 EC-CUBE4.1.2-p1:
 	curl -vOL https://downloads.ec-cube.net/src/eccube-4.1.2-p1.tar.gz
 	tar -zxvf eccube-4.1.2-p1.tar.gz
 	mv ec-cube eccube
 	rm eccube-4.1.2-p1.tar.gz
-	@echo "\n\n\nECCUBE4.1.2-p1 Download Complete!!!\n\n\n"
+	@echo "\n\n\nEC-CUBE4.1.2-p1 Download Complete!!!\n\n\n"
 
 EC-CUBE4.1.2-p1-latest:
 	curl -vOL https://downloads.ec-cube.net/src/eccube-4.1.2-p1.tar.gz
 	tar -zxvf eccube-4.1.2-p1.tar.gz
 	mv ec-cube eccube
 	rm eccube-4.1.2-p1.tar.gz
-	@echo "\n\n\nECCUBE4.1.2-p1 Download Complete!!!\n\n\n"
+	@echo "\n\n\nEC-CUBE4.1.2-p1 Download Complete!!!\n\n\n"
 	make PHP7.4
 	make MySQL5.7
-	@echo "\n\n\nECCUBE4.1.2-p1-PHP7.4-MySQL5.7 Setup Complete!!!\n\n\n"
+	@echo "\n\n\nPHP7.4 MySQL5.7 Setup Complete!!!\n\n\n"
 
 EC-CUBE4.1.2:
 	curl -vOL https://downloads.ec-cube.net/src/eccube-4.1.2.tar.gz
 	tar -zxvf eccube-4.1.2.tar.gz
 	mv ec-cube eccube
 	rm eccube-4.1.2.tar.gz
-	@echo "\n\n\nECCUBE4.1.2 Download Complete!!!\n\n\n"
+	@echo "\n\n\nEC-CUBE4.1.2 Download Complete!!!\n\n\n"
 
 EC-CUBE4.1.2-latest:
 	curl -vOL https://downloads.ec-cube.net/src/eccube-4.1.2.tar.gz
 	tar -zxvf eccube-4.1.2.tar.gz
 	mv ec-cube eccube
 	rm eccube-4.1.2.tar.gz
-	@echo "\n\n\nECCUBE4.1.2 Download Complete!!!\n\n\n"
+	@echo "\n\n\nEC-CUBE4.1.2 Download Complete!!!\n\n\n"
 	make PHP7.4
 	make MySQL5.7
-	@echo "\n\n\nECCUBE4.1.2-PHP7.4-MySQL5.7 Setup Complete!!!\n\n\n"
+	@echo "\n\n\nPHP7.4 MySQL5.7 Setup Complete!!!\n\n\n"
 
 EC-CUBE4.1.1:
 	curl -vOL https://downloads.ec-cube.net/src/eccube-4.1.1.tar.gz
 	tar -zxvf eccube-4.1.1.tar.gz
 	mv ec-cube eccube
 	rm eccube-4.1.1.tar.gz
-	@echo "\n\n\nECCUBE4.1.1 Download Complete!!!\n\n\n"
+	@echo "\n\n\nEC-CUBE4.1.1 Download Complete!!!\n\n\n"
 
 EC-CUBE4.1.1-latest:
 	curl -vOL https://downloads.ec-cube.net/src/eccube-4.1.1.tar.gz
 	tar -zxvf eccube-4.1.1.tar.gz
 	mv ec-cube eccube
 	rm eccube-4.1.1.tar.gz
-	@echo "\n\n\nECCUBE4.1.1 Download Complete!!!\n\n\n"
+	@echo "\n\n\nEC-CUBE4.1.1 Download Complete!!!\n\n\n"
 	make PHP7.4
 	make MySQL5.7
-	@echo "\n\n\nECCUBE4.1.1-PHP7.4-MySQL5.7 Setup Complete!!!\n\n\n"
+	@echo "\n\n\nPHP7.4 MySQL5.7 Setup Complete!!!\n\n\n"
 
 EC-CUBE4.1.0:
 	curl -vOL https://downloads.ec-cube.net/src/eccube-4.1.0.tar.gz
 	tar -zxvf eccube-4.1.0.tar.gz
 	mv ec-cube eccube
 	rm eccube-4.1.0.tar.gz
-	@echo "\n\n\nECCUBE4.1.0 Download Complete!!!\n\n\n"
+	@echo "\n\n\nEC-CUBE4.1.0 Download Complete!!!\n\n\n"
 
 EC-CUBE4.1.0-latest:
 	curl -vOL https://downloads.ec-cube.net/src/eccube-4.1.0.tar.gz
 	tar -zxvf eccube-4.1.0.tar.gz
 	mv ec-cube eccube
 	rm eccube-4.1.0.tar.gz
-	@echo "\n\n\nECCUBE4.1.0 Download Complete!!!\n\n\n"
+	@echo "\n\n\nEC-CUBE4.1.0 Download Complete!!!\n\n\n"
 	make PHP7.4
 	make MySQL5.7
-	@echo "\n\n\nECCUBE4.1.0-PHP7.4-MySQL5.7 Setup Complete!!!\n\n\n"
+	@echo "\n\n\nPHP7.4 MySQL5.7 Setup Complete!!!\n\n\n"
 
 EC-CUBE4.0.6-p2:
 	curl -vOL https://downloads.ec-cube.net/src/eccube-4.0.6-p2.tar.gz
 	tar -zxvf eccube-4.0.6-p2.tar.gz
 	mv eccube-4.0.6-p2 eccube
 	rm eccube-4.0.6-p2.tar.gz
-	@echo "\n\n\nECCUBE4.0.6-p2 Download Complete!!!\n\n\n"
+	@echo "\n\n\nEC-CUBE4.0.6-p2 Download Complete!!!\n\n\n"
+
+EC-CUBE4.0.6-p2-latest:
+	curl -vOL https://downloads.ec-cube.net/src/eccube-4.0.6-p2.tar.gz
+	tar -zxvf eccube-4.0.6-p2.tar.gz
+	mv eccube-4.0.6-p2 eccube
+	rm eccube-4.0.6-p2.tar.gz
+	@echo "\n\n\nEC-CUBE4.0.6-p2 Download Complete!!!\n\n\n"
+	make PHP7.4
+	make MySQL5.7
+	@echo "\n\n\nPHP7.4 MySQL5.7 Setup Complete!!!\n\n\n"
 
 EC-CUBE4.0.6-p1:
 	curl -vOL https://downloads.ec-cube.net/src/eccube-4.0.6-p1.tar.gz
 	tar -zxvf eccube-4.0.6-p1.tar.gz
 	mv eccube-4.0.6-p1 eccube
 	rm eccube-4.0.6-p1.tar.gz
-	@echo "\n\n\nECCUBE4.0.6-p1 Download Complete!!!\n\n\n"
+	@echo "\n\n\nEC-CUBE4.0.6-p1 Download Complete!!!\n\n\n"
+
+EC-CUBE4.0.6-p1-latest:
+	curl -vOL https://downloads.ec-cube.net/src/eccube-4.0.6-p1.tar.gz
+	tar -zxvf eccube-4.0.6-p1.tar.gz
+	mv eccube-4.0.6-p1 eccube
+	rm eccube-4.0.6-p1.tar.gz
+	@echo "\n\n\nEC-CUBE4.0.6-p1 Download Complete!!!\n\n\n"
+	make PHP7.4
+	make MySQL5.7
+	@echo "\n\n\nPHP7.4 MySQL5.7 Setup Complete!!!\n\n\n"
 
 EC-CUBE4.0.6:
 	curl -vOL https://downloads.ec-cube.net/src/eccube-4.0.6.tar.gz
 	tar -zxvf eccube-4.0.6.tar.gz
 	mv eccube-4.0.6 eccube
 	rm eccube-4.0.6.tar.gz
-	@echo "\n\n\nECCUBE4.0.6 Download Complete!!!\n\n\n"
+	@echo "\n\n\nEC-CUBE4.0.6 Download Complete!!!\n\n\n"
+
+EC-CUBE4.0.6-latest:
+	curl -vOL https://downloads.ec-cube.net/src/eccube-4.0.6.tar.gz
+	tar -zxvf eccube-4.0.6.tar.gz
+	mv eccube-4.0.6 eccube
+	rm eccube-4.0.6.tar.gz
+	@echo "\n\n\nEC-CUBE4.0.6 Download Complete!!!\n\n\n"
+	make PHP7.4
+	make MySQL5.7
+	@echo "\n\n\nPHP7.4 MySQL5.7 Setup Complete!!!\n\n\n"
 
 EC-CUBE4.0.5-p1:
 	curl -vOL https://downloads.ec-cube.net/src/eccube-4.0.5-p1.tar.gz
 	tar -zxvf eccube-4.0.5-p1.tar.gz
 	mv eccube-4.0.5-p1 eccube
 	rm eccube-4.0.5-p1.tar.gz
-	@echo "\n\n\nECCUBE4.0.5-p1 Download Complete!!!\n\n\n"
+	@echo "\n\n\nEC-CUBE4.0.5-p1 Download Complete!!!\n\n\n"
+
+EC-CUBE4.0.5-p1-latest:
+	curl -vOL https://downloads.ec-cube.net/src/eccube-4.0.5-p1.tar.gz
+	tar -zxvf eccube-4.0.5-p1.tar.gz
+	mv eccube-4.0.5-p1 eccube
+	rm eccube-4.0.5-p1.tar.gz
+	@echo "\n\n\nEC-CUBE4.0.5-p1 Download Complete!!!\n\n\n"
+	make PHP7.4
+	make MySQL5.7
+	@echo "\n\n\nPHP7.4 MySQL5.7 Setup Complete!!!\n\n\n"
 
 EC-CUBE4.0.5:
 	curl -vOL https://downloads.ec-cube.net/src/eccube-4.0.5.tar.gz
 	tar -zxvf eccube-4.0.5.tar.gz
 	mv eccube-4.0.5 eccube
 	rm eccube-4.0.5.tar.gz
-	@echo "\n\n\nECCUBE4.0.5 Download Complete!!!\n\n\n"
+	@echo "\n\n\nEC-CUBE4.0.5 Download Complete!!!\n\n\n"
+
+EC-CUBE4.0.5-latest:
+	curl -vOL https://downloads.ec-cube.net/src/eccube-4.0.5.tar.gz
+	tar -zxvf eccube-4.0.5.tar.gz
+	mv eccube-4.0.5 eccube
+	rm eccube-4.0.5.tar.gz
+	@echo "\n\n\nEC-CUBE4.0.5 Download Complete!!!\n\n\n"
+	make PHP7.4
+	make MySQL5.7
+	@echo "\n\n\nPHP7.4 MySQL5.7 Setup Complete!!!\n\n\n"
 
 EC-CUBE4.0.4:
 	curl -vOL https://downloads.ec-cube.net/src/eccube-4.0.4.tar.gz
 	tar -zxvf eccube-4.0.4.tar.gz
 	mv eccube-4.0.4 eccube
 	rm eccube-4.0.4.tar.gz
-	@echo "\n\n\nECCUBE4.0.4 Download Complete!!!\n\n\n"
+	@echo "\n\n\nEC-CUBE4.0.4 Download Complete!!!\n\n\n"
+
+EC-CUBE4.0.4-latest:
+	curl -vOL https://downloads.ec-cube.net/src/eccube-4.0.4.tar.gz
+	tar -zxvf eccube-4.0.4.tar.gz
+	mv eccube-4.0.4 eccube
+	rm eccube-4.0.4.tar.gz
+	@echo "\n\n\nEC-CUBE4.0.4 Download Complete!!!\n\n\n"
+	make PHP7.4
+	make MySQL5.7
+	@echo "\n\n\nPHP7.4 MySQL5.7 Setup Complete!!!\n\n\n"
 
 EC-CUBE4.0.3:
 	curl -vOL https://downloads.ec-cube.net/src/eccube-4.0.3.tar.gz
 	tar -zxvf eccube-4.0.3.tar.gz
 	mv eccube-4.0.3 eccube
 	rm eccube-4.0.3.tar.gz
-	@echo "\n\n\nECCUBE4.0.3 Download Complete!!!\n\n\n"
+	@echo "\n\n\nEC-CUBE4.0.3 Download Complete!!!\n\n\n"
+
+EC-CUBE4.0.3-latest:
+	curl -vOL https://downloads.ec-cube.net/src/eccube-4.0.3.tar.gz
+	tar -zxvf eccube-4.0.3.tar.gz
+	mv eccube-4.0.3 eccube
+	rm eccube-4.0.3.tar.gz
+	@echo "\n\n\nEC-CUBE4.0.3 Download Complete!!!\n\n\n"
+	make PHP7.3
+	make MySQL5.7
+	@echo "\n\n\nPHP7.3 MySQL5.7 Setup Complete!!!\n\n\n"
 
 EC-CUBE4.0.2:
 	curl -vOL https://downloads.ec-cube.net/src/eccube-4.0.2.tar.gz
 	tar -zxvf eccube-4.0.2.tar.gz
 	mv eccube-4.0.2 eccube
 	rm eccube-4.0.2.tar.gz
-	@echo "\n\n\nECCUBE4.0.2 Download Complete!!!\n\n\n"
+	@echo "\n\n\nEC-CUBE4.0.2 Download Complete!!!\n\n\n"
+
+EC-CUBE4.0.2-latest:
+	curl -vOL https://downloads.ec-cube.net/src/eccube-4.0.2.tar.gz
+	tar -zxvf eccube-4.0.2.tar.gz
+	mv eccube-4.0.2 eccube
+	rm eccube-4.0.2.tar.gz
+	@echo "\n\n\nEC-CUBE4.0.2 Download Complete!!!\n\n\n"
+	make PHP7.3
+	make MySQL5.7
+	@echo "\n\n\nPHP7.3 MySQL5.7 Setup Complete!!!\n\n\n"
 
 EC-CUBE4.0.1:
 	curl -vOL https://downloads.ec-cube.net/src/eccube-4.0.1.tar.gz
 	tar -zxvf eccube-4.0.1.tar.gz
 	mv eccube-4.0.1 eccube
 	rm eccube-4.0.1.tar.gz
-	@echo "\n\n\nECCUBE4.0.1 Download Complete!!!\n\n\n"
+	@echo "\n\n\nEC-CUBE4.0.1 Download Complete!!!\n\n\n"
+
+EC-CUBE4.0.1-latest:
+	curl -vOL https://downloads.ec-cube.net/src/eccube-4.0.1.tar.gz
+	tar -zxvf eccube-4.0.1.tar.gz
+	mv eccube-4.0.1 eccube
+	rm eccube-4.0.1.tar.gz
+	@echo "\n\n\nEC-CUBE4.0.1 Download Complete!!!\n\n\n"
+	make PHP7.2
+	make MySQL5.7
+	@echo "\n\n\nPHP7.2 MySQL5.7 Setup Complete!!!\n\n\n"
 
 EC-CUBE4.0.0:
 	curl -vOL https://downloads.ec-cube.net/src/eccube-4.0.0.tar.gz
 	tar -zxvf eccube-4.0.0.tar.gz
 	mv eccube-4.0.0 eccube
 	rm eccube-4.0.0.tar.gz
-	@echo "\n\n\nECCUBE4.0.0 Download Complete!!!\n\n\n"
+	@echo "\n\n\nEC-CUBE4.0.0 Download Complete!!!\n\n\n"
+
+EC-CUBE4.0.0-latest:
+	curl -vOL https://downloads.ec-cube.net/src/eccube-4.0.0.tar.gz
+	tar -zxvf eccube-4.0.0.tar.gz
+	mv eccube-4.0.0 eccube
+	rm eccube-4.0.0.tar.gz
+	@echo "\n\n\nEC-CUBE4.0.0 Download Complete!!!\n\n\n"
+	make PHP7.2
+	make MySQL5.7
+	@echo "\n\n\nPHP7.2 MySQL5.7 Setup Complete!!!\n\n\n"
 
 PHP8.2:
 	ln -s Dockerfiles/Dockerfile-php82-apache-bullseye Dockerfile

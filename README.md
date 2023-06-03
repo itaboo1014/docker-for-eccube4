@@ -192,7 +192,7 @@ make
 
 | Front                   | Browsing              |
 |:------------------------|:----------------------|
-| ECCUBE                  | http://localhost      |
+| EC-CUBE                 | http://localhost      |
 | Adminer (PostgreSQL)    | http://localhost:8080 |
 | phpMyAdmin (MySQL)      | http://localhost:8080 |
 | MailCatcher             | http://localhost:1080 |

@@ -23,16 +23,16 @@ EC-CUBE 4系 向けのDocker環境を提供するプロジェクトです。
 
 当プロジェクトのサポート内容は下記の通りです。
 
-| 分類       | ソフトウェア           | バージョン                |
-|:----------|:---------------------|:------------------------|
-| WebServer | Apache               | 2.4.x                   |
-| PHP       | PHP                  | 7.1 ~ 7.4, 8.0 ~ 8.2    |
-| Database  | PostgreSQL           | 9.x ~ 14.x              |
-| Database  | MySQL                | 5.7 or 8.0              |
-| Database  | SQLite               | not supported           |
-| DBMS      | Adminer (PostgreSQL) |                         |
-| DBMS      | phpMyAdmin (MySQL)   |                         |
-| Others    | MailCatcher          |                         |
+| 分類       | ソフトウェア                  | バージョン                     |
+|:----------|:----------------------------|:-----------------------------|
+| WebServer | Apache                      | 2.4.x                        |
+| PHP       | PHP                         | 7.1.x ~ 7.4.x, 8.0.x ~ 8.2.x |
+| Database  | PostgreSQL                  | 9.x ~ 14.x                   |
+| Database  | MySQL                       | 5.7.x or 8.0.x               |
+| Database  | SQLite                      | 3.x                          |
+| DBMS      | Adminer (PostgreSQL/SQLite) |                              |
+| DBMS      | phpMyAdmin (MySQL)          |                              |
+| Others    | MailCatcher                 |                              |
 
 使用できるソフトウェアのバージョンはEC-CUBE 4系 のマイナーバージョンによって異なります。
 詳細は公式ドキュメントの[システム要件](https://doc4.ec-cube.net/quickstart/requirement)をご確認ください。
@@ -136,6 +136,7 @@ PostgreSQL12
 PostgreSQL11
 PostgreSQL10
 PostgreSQL9
+SQLite3
 ```
 
 
@@ -180,27 +181,28 @@ make
 <a id="db_info"></a>
 # データベースの設定情報
 
-|               | MySQL         | PostgreSQL    |
-|:--------------|:--------------|:--------------|
-| database      | `eccube`      | `eccube`      |
-| host          | `db`          | `db`          |
-| port          | `3306`        | `5432`        |
-| user          | `db_user`     | `db_user`     |
-| password      | `db_password` | `db_password` |
-| root password | `db_password` |               |
-| DBMS          | phpMyAdmin    | Adminer       |
+|               | MySQL         | PostgreSQL    | SQLite             |
+|:--------------|:--------------|:--------------|:-------------------|
+| database      | `eccube`      | `eccube`      | `../var/eccube.db` |
+| host          | `db`          | `db`          |                    |
+| port          | `3306`        | `5432`        |                    |
+| user          | `db_user`     | `db_user`     |                    |
+| password      | `db_password` | `db_password` | `db_password`      |
+| root password | `db_password` |               |                    |
+| DBMS          | phpMyAdmin    | Adminer       | Adminer (Custom)   |
 
 
 
 <a id="browse"></a>
 # ブラウジング
 
-| Front                   | Browsing              |
-|:------------------------|:----------------------|
-| EC-CUBE                 | http://localhost      |
-| Adminer (PostgreSQL)    | http://localhost:8080 |
-| phpMyAdmin (MySQL)      | http://localhost:8080 |
-| MailCatcher             | http://localhost:1080 |
+| Front                   | Browsing                                      |
+|:------------------------|:----------------------------------------------|
+| EC-CUBE                 | http://localhost                              |
+| Adminer (PostgreSQL)    | http://localhost:8080                         |
+| Adminer (SQLite)        | http://localhost/adminer_for_sqlite/index.php |
+| phpMyAdmin (MySQL)      | http://localhost:8080                         |
+| MailCatcher             | http://localhost:1080                         |
 
 
 <a id="other"></a>

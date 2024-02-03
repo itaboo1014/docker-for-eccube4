@@ -18,6 +18,16 @@ EC-CUBE4.2.3-latest:
 	make MySQL8.0
 	@echo "\n\n\nPHP8.1 MySQL8.0 Setup Complete!!!\n\n\n"
 
+EC-CUBE4.2.3-light:
+	curl -vOL https://downloads.ec-cube.net/src/eccube-4.2.3.tar.gz
+	tar -zxvf eccube-4.2.3.tar.gz
+	mv ec-cube eccube
+	rm eccube-4.2.3.tar.gz
+	@echo "\n\n\nEC-CUBE4.2.3 Download Complete!!!\n\n\n"
+	make PHP8.1
+	make SQLite3
+	@echo "\n\n\nPHP8.1 SQLite3 Setup Complete!!!\n\n\n"
+
 EC-CUBE4.2.2:
 	curl -vOL https://downloads.ec-cube.net/src/eccube-4.2.2.tar.gz
 	tar -zxvf eccube-4.2.2.tar.gz
@@ -434,6 +444,10 @@ PostgreSQL10:
 PostgreSQL9:
 	ln -s DockerCompose/docker-compose.yml-postgres9 docker-compose.yml
 	@echo "\n\n\nPostgreSQL9 Setup Complete!!!\n\n\n"
+
+SQLite3:
+	ln -s DockerCompose/docker-compose.yml-sqlite3 docker-compose.yml
+	@echo "\n\n\nSQLite3 Setup Complete!!!\n\n\n"
 
 Initialization:
 	-@docker-compose down -v

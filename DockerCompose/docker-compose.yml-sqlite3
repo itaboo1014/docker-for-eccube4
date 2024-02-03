@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  app:
+    build:
+      context: .
+    hostname: 'local'
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./eccube:/var/www/eccube
+      - ./root/adminer_for_sqlite:/var/www/eccube/adminer_for_sqlite
+      - ./root/usr/local/etc/php/php.ini:/usr/local/etc/php/php.ini
+      - ./root/root/.bashrc:/root/.bashrc
+      - ./root/root/.vimrc:/root/.vimrc
+      - eccube_var:/var/www/eccube/var
+      - eccube_node_modules:/var/www/eccube/node_modules
+    command: "/bin/bash -c 'if [ ! -f /usr/local/.initialized ]; then chown -R www-data: /var/www/eccube && touch /usr/local/.initialized; fi && apache2-foreground'"
+  mailcatcher:
+    image: schickling/mailcatcher
+    ports:
+      - 1080:1080
+      - 1025:1025
+    depends_on:
+      - app
+volumes:
+  eccube_var:
+  eccube_node_modules:

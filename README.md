@@ -73,6 +73,7 @@ make EC-CUBE4.2.3
 当プロジェクトで提供しているバージョンは下記の通りです。
 
 ```
+EC-CUBE4.3.0-beta
 EC-CUBE4.2.3
 EC-CUBE4.2.2
 EC-CUBE4.2.1

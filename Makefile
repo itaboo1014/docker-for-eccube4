@@ -420,11 +420,11 @@ PHP7.3:
 	@echo "\n\n\nPHP7.3 Setup Complete!!!\n\n\n"
 
 PHP7.2:
-	ln -s Dockerfiles/Dockerfile-php72-apache-bullseye Dockerfile
+	ln -s Dockerfiles/Dockerfile-php72-apache Dockerfile
 	@echo "\n\n\nPHP7.2 Setup Complete!!!\n\n\n"
 
 PHP7.1:
-	ln -s Dockerfiles/Dockerfile-php71-apache-bullseye Dockerfile
+	ln -s Dockerfiles/Dockerfile-php71-apache Dockerfile
 	@echo "\n\n\nPHP7.1 Setup Complete!!!\n\n\n"
 
 MySQL8.0:

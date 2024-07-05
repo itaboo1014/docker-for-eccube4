@@ -12,6 +12,7 @@
 - [実行できる make コマンド](#実行できる-make-コマンド)
 - [データベースの設定情報](#データベースの設定情報)
 - [ブラウジング](#ブラウジング)
+- [Apple シリコン搭載の Mac 利用者向けの設定](#apple-シリコン搭載の-mac-利用者向けの設定)
 - [Linux ディストリビューション利用者向けの設定](#linux-ディストリビューション利用者向けの設定)
 
 <a id="introduction"></a>
@@ -220,6 +221,24 @@ make
 | MailCatcher          | http://localhost:1080                         |
 
 <a id="other"></a>
+
+# Apple シリコン搭載の Mac 利用者向けの設定
+
+mysql コンテナ起動時に下記エラーが発生することがあります。
+
+```
+no matching manifest for linux/arm64/v8 in the manifest list entries
+```
+
+その際は、docker-compose.yml ファイルを開き、db コンテナの設定に `platform: linux/x86_64` を追加してください。
+
+```
+db:
+  platform: linux/x86_64 # この行を追加
+  image: mysql:5.7
+```
+
+コンテナを再起動します。
 
 # Linux ディストリビューション利用者向けの設定
 

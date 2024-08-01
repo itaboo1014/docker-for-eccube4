@@ -74,17 +74,20 @@ make EC-CUBE4.2.3
 当プロジェクトで提供しているバージョンは下記の通りです。
 
 ```
-EC-CUBE4.3.0-beta
+EC-CUBE4.3.0
+EC-CUBE4.2.3-p1
 EC-CUBE4.2.3
 EC-CUBE4.2.2
 EC-CUBE4.2.1
 EC-CUBE4.2.0
+EC-CUBE4.1.2-p4
 EC-CUBE4.1.2-p3
 EC-CUBE4.1.2-p2
 EC-CUBE4.1.2-p1
 EC-CUBE4.1.2
 EC-CUBE4.1.1
 EC-CUBE4.1.0
+EC-CUBE4.0.6-p5
 EC-CUBE4.0.6-p4
 EC-CUBE4.0.6-p3
 EC-CUBE4.0.6-p2
@@ -105,10 +108,10 @@ EC-CUBE4.0.0
 
 使用する PHP のバージョンを指定します。
 
-：例 PHP 8.1 の場合
+：例 PHP 8.3 の場合
 
 ```
-make PHP8.1
+make PHP8.3
 ```
 
 当プロジェクトで提供しているバージョンは下記の通りです。

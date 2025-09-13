@@ -1,6 +1,23 @@
 help:
 	@grep "^[0-9a-zA-Z\.\-]*:" Makefile | grep -v "grep" | sed -e 's/^/make /' | sed -e 's/://'
 
+EC-CUBE4.3.1:
+	curl -vOL https://downloads.ec-cube.net/src/eccube-4.3.1.tar.gz
+	tar -zxvf eccube-4.3.1.tar.gz
+	mv ec-cube eccube
+	rm eccube-4.3.1.tar.gz
+	@echo "\n\n\nEC-CUBE4.3.1 Download Complete!!!\n\n\n"
+
+EC-CUBE4.3.1-latest:
+	curl -vOL https://downloads.ec-cube.net/src/eccube-4.3.1.tar.gz
+	tar -zxvf eccube-4.3.1.tar.gz
+	mv ec-cube eccube
+	rm eccube-4.3.1.tar.gz
+	@echo "\n\n\nEC-CUBE4.3.1 Download Complete!!!\n\n\n"
+	make PHP8.3
+	make MySQL8.0
+	@echo "\n\n\nPHP8.3 MySQL8.0 Setup Complete!!!\n\n\n"
+
 EC-CUBE4.3.0:
 	curl -vOL https://downloads.ec-cube.net/src/eccube-4.3.0.tar.gz
 	tar -zxvf eccube-4.3.0.tar.gz

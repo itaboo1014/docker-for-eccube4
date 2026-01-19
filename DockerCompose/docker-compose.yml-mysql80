@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   app:
     build:
@@ -11,13 +9,14 @@ services:
     volumes:
       - ./eccube:/var/www/eccube
       - ./root/usr/local/etc/php/php.ini:/usr/local/etc/php/php.ini
+      - ./root/usr/local/etc/php/conf.d/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
       - ./root/root/.bashrc:/root/.bashrc
       - ./root/root/.vimrc:/root/.vimrc
       - eccube_var:/var/www/eccube/var
       - eccube_node_modules:/var/www/eccube/node_modules
     depends_on:
       - db
-    command: "/bin/bash -c 'if [ ! -f /usr/local/.initialized ]; then chown -R www-data: /var/www/eccube && touch /usr/local/.initialized; fi && apache2-foreground'"
+    # command: "/bin/bash -c 'if [ ! -f /usr/local/.initialized ]; then chown -R www-data: /var/www/eccube && touch /usr/local/.initialized; fi && apache2-foreground'"
   db:
     image: mysql:8.0
     ports:

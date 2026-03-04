@@ -74,6 +74,7 @@ make EC-CUBE4.3.1
 当プロジェクトで提供しているバージョンは下記の通りです。
 
 ```
+EC-CUBE4.3.1-p1
 EC-CUBE4.3.1
 EC-CUBE4.3.0
 EC-CUBE4.2.3-p1

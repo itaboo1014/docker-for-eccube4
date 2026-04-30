@@ -65,21 +65,25 @@ cd docker-for-eccube4
 
 EC-CUBE のバージョンを指定し、ソースコードをダウンロードします。
 
-：例 EC-CUBE 4.2.3 の場合
+：例 EC-CUBE 4.3.1 の場合
 
 ```
-make EC-CUBE4.2.3
+make EC-CUBE4.3.1
 ```
 
 当プロジェクトで提供しているバージョンは下記の通りです。
 
 ```
+EC-CUBE4.3.1-p1
+EC-CUBE4.3.1
 EC-CUBE4.3.0
+EC-CUBE4.2.3-p2
 EC-CUBE4.2.3-p1
 EC-CUBE4.2.3
 EC-CUBE4.2.2
 EC-CUBE4.2.1
 EC-CUBE4.2.0
+EC-CUBE4.1.2-p5
 EC-CUBE4.1.2-p4
 EC-CUBE4.1.2-p3
 EC-CUBE4.1.2-p2

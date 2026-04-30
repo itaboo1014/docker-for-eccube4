@@ -29,7 +29,7 @@ services:
     volumes:
       - eccube_db:/var/lib/mysql
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin
+    image: phpmyadmin:latest
     ports:
       - 8080:80
     environment:

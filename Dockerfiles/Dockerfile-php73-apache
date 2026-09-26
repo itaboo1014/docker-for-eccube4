@@ -1,10 +1,15 @@
 ARG PHP_VERSION=7.3
 
-FROM php:${PHP_VERSION}-apache-bullseye
+FROM php:${PHP_VERSION}-apache
 
 ENV APACHE_DOCUMENT_ROOT /var/www/eccube/
 
-RUN apt update && apt install -y --no-install-recommends \
+RUN printf '%s\n' \
+    'deb [check-valid-until=no] http://snapshot.debian.org/archive/debian/20220316T000000Z bullseye main' \
+    'deb [check-valid-until=no] http://snapshot.debian.org/archive/debian-security/20220316T000000Z bullseye-security main' \
+    'deb [check-valid-until=no] http://snapshot.debian.org/archive/debian/20220316T000000Z bullseye-updates main' \
+    > /etc/apt/sources.list \
+    && apt-get update && apt-get install -y --no-install-recommends \
     apt-transport-https \
     apt-utils \
     build-essential \
@@ -25,7 +30,7 @@ RUN apt update && apt install -y --no-install-recommends \
     unzip \
     zlib1g-dev \
     libwebp-dev \
-    && apt clean \
+    && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
     && echo "en_US.UTF-8 UTF-8" >/etc/locale.gen \
     && locale-gen \
@@ -38,10 +43,9 @@ RUN docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
 
 RUN pecl install apcu && echo "extension=apcu.so" > /usr/local/etc/php/conf.d/apc.ini
 
-RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - \
-    && apt update \
-    && apt install -y nodejs \
-    && apt clean \
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends nodejs npm \
+    && apt-get clean \
     ;
 
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf \

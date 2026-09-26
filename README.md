@@ -112,15 +112,17 @@ EC-CUBE4.0.0
 
 使用する PHP のバージョンを指定します。
 
-：例 PHP 8.3 の場合
+：例 PHP 8.5 の場合
 
 ```
-make PHP8.3
+make PHP8.5
 ```
 
 当プロジェクトで提供しているバージョンは下記の通りです。
 
 ```
+PHP8.5
+PHP8.4
 PHP8.3
 PHP8.2
 PHP8.1
@@ -137,17 +139,25 @@ PHP7.1
 
 使用するデータベースとバージョンを指定します。
 
-：例 MySQL 8.0 の場合
+：例 MySQL 8.4 の場合
 
 ```
-make MySQL8.0
+make MySQL8.4
 ```
 
 当プロジェクトで提供しているデータベースとバージョンは下記の通りです。
 
 ```
+MySQL8.4
+MySQL8.3
+MySQL8.2
+MySQL8.1
 MySQL8.0
 MySQL5.7
+PostgreSQL18
+PostgreSQL17
+PostgreSQL16
+PostgreSQL15
 PostgreSQL14
 PostgreSQL13
 PostgreSQL12

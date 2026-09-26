@@ -1,15 +1,10 @@
-ARG PHP_VERSION=7.2
+ARG PHP_VERSION=8.2
 
 FROM php:${PHP_VERSION}-apache
 
 ENV APACHE_DOCUMENT_ROOT /var/www/eccube/
 
-RUN printf '%s\n' \
-    'deb [check-valid-until=no] http://snapshot.debian.org/archive/debian/20201209T232235Z buster main' \
-    'deb [check-valid-until=no] http://snapshot.debian.org/archive/debian-security/20201209T232235Z buster/updates main' \
-    'deb [check-valid-until=no] http://snapshot.debian.org/archive/debian/20201209T232235Z buster-updates main' \
-    > /etc/apt/sources.list \
-    && apt-get update && apt-get install -y --no-install-recommends \
+RUN apt update && apt install -y --no-install-recommends \
     apt-transport-https \
     apt-utils \
     build-essential \
@@ -30,22 +25,23 @@ RUN printf '%s\n' \
     unzip \
     zlib1g-dev \
     libwebp-dev \
-    && apt-get clean \
+    && apt clean \
     && rm -rf /var/lib/apt/lists/* \
     && echo "en_US.UTF-8 UTF-8" >/etc/locale.gen \
     && locale-gen \
     ;
 
 RUN docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
-    && docker-php-ext-configure gd --with-freetype-dir --with-jpeg-dir --with-webp-dir \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp \
     && docker-php-ext-install -j$(nproc) zip gd mysqli pdo_mysql opcache intl pgsql pdo_pgsql \
     ;
 
 RUN pecl install apcu && echo "extension=apcu.so" > /usr/local/etc/php/conf.d/apc.ini
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends nodejs npm \
-    && apt-get clean \
+RUN curl -sL https://deb.nodesource.com/setup_20.x | bash - \
+    && apt update \
+    && apt install -y nodejs \
+    && apt clean \
     ;
 
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf \

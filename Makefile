@@ -521,28 +521,36 @@ EC-CUBE4.0.0-latest:
 	make MySQL5.7
 	@echo "\n\n\nPHP7.2 MySQL5.7 Setup Complete!!!\n\n\n"
 
+PHP8.5:
+	ln -s Dockerfiles/Dockerfile-php85-apache Dockerfile
+	@echo "\n\n\nPHP8.5 Setup Complete!!!\n\n\n"
+
+PHP8.4:
+	ln -s Dockerfiles/Dockerfile-php84-apache Dockerfile
+	@echo "\n\n\nPHP8.4 Setup Complete!!!\n\n\n"
+
 PHP8.3:
-	ln -s Dockerfiles/Dockerfile-php83-apache-bullseye Dockerfile
+	ln -s Dockerfiles/Dockerfile-php83-apache Dockerfile
 	@echo "\n\n\nPHP8.3 Setup Complete!!!\n\n\n"
 
 PHP8.2:
-	ln -s Dockerfiles/Dockerfile-php82-apache-bullseye Dockerfile
+	ln -s Dockerfiles/Dockerfile-php82-apache Dockerfile
 	@echo "\n\n\nPHP8.2 Setup Complete!!!\n\n\n"
 
 PHP8.1:
-	ln -s Dockerfiles/Dockerfile-php81-apache-bullseye Dockerfile
+	ln -s Dockerfiles/Dockerfile-php81-apache Dockerfile
 	@echo "\n\n\nPHP8.1 Setup Complete!!!\n\n\n"
 
 PHP8.0:
-	ln -s Dockerfiles/Dockerfile-php80-apache-bullseye Dockerfile
+	ln -s Dockerfiles/Dockerfile-php80-apache Dockerfile
 	@echo "\n\n\nPHP8.0 Setup Complete!!!\n\n\n"
 
 PHP7.4:
-	ln -s Dockerfiles/Dockerfile-php74-apache-bullseye Dockerfile
+	ln -s Dockerfiles/Dockerfile-php74-apache Dockerfile
 	@echo "\n\n\nPHP7.4 Setup Complete!!!\n\n\n"
 
 PHP7.3:
-	ln -s Dockerfiles/Dockerfile-php73-apache-bullseye Dockerfile
+	ln -s Dockerfiles/Dockerfile-php73-apache Dockerfile
 	@echo "\n\n\nPHP7.3 Setup Complete!!!\n\n\n"
 
 PHP7.2:
@@ -553,6 +561,22 @@ PHP7.1:
 	ln -s Dockerfiles/Dockerfile-php71-apache Dockerfile
 	@echo "\n\n\nPHP7.1 Setup Complete!!!\n\n\n"
 
+MySQL8.4:
+	ln -s DockerCompose/docker-compose.yml-mysql84 docker-compose.yml
+	@echo "\n\n\nMySQL8.4 Setup Complete!!!\n\n\n"
+
+MySQL8.3:
+	ln -s DockerCompose/docker-compose.yml-mysql83 docker-compose.yml
+	@echo "\n\n\nMySQL8.3 Setup Complete!!!\n\n\n"
+
+MySQL8.2:
+	ln -s DockerCompose/docker-compose.yml-mysql82 docker-compose.yml
+	@echo "\n\n\nMySQL8.2 Setup Complete!!!\n\n\n"
+
+MySQL8.1:
+	ln -s DockerCompose/docker-compose.yml-mysql81 docker-compose.yml
+	@echo "\n\n\nMySQL8.1 Setup Complete!!!\n\n\n"
+
 MySQL8.0:
 	ln -s DockerCompose/docker-compose.yml-mysql80 docker-compose.yml
 	@echo "\n\n\nMySQL8.0 Setup Complete!!!\n\n\n"
@@ -560,6 +584,22 @@ MySQL8.0:
 MySQL5.7:
 	ln -s DockerCompose/docker-compose.yml-mysql57 docker-compose.yml
 	@echo "\n\n\nMySQL5.7 Setup Complete!!!\n\n\n"
+
+PostgreSQL18:
+	ln -s DockerCompose/docker-compose.yml-postgres18 docker-compose.yml
+	@echo "\n\n\nPostgreSQL18 Setup Complete!!!\n\n\n"
+
+PostgreSQL17:
+	ln -s DockerCompose/docker-compose.yml-postgres17 docker-compose.yml
+	@echo "\n\n\nPostgreSQL17 Setup Complete!!!\n\n\n"
+
+PostgreSQL16:
+	ln -s DockerCompose/docker-compose.yml-postgres16 docker-compose.yml
+	@echo "\n\n\nPostgreSQL16 Setup Complete!!!\n\n\n"
+
+PostgreSQL15:
+	ln -s DockerCompose/docker-compose.yml-postgres15 docker-compose.yml
+	@echo "\n\n\nPostgreSQL15 Setup Complete!!!\n\n\n"
 
 PostgreSQL14:
 	ln -s DockerCompose/docker-compose.yml-postgres14 docker-compose.yml

@@ -18,7 +18,7 @@ services:
       - db
     command: "/bin/bash -c 'if [ ! -f /usr/local/.initialized ]; then chown -R www-data: /var/www/eccube && touch /usr/local/.initialized; fi && apache2-foreground'"
   db:
-    image: mysql:8.0
+    image: mysql:8.2
     ports:
       - 3306:3306
     environment:

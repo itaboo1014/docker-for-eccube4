@@ -26,9 +26,9 @@ EC-CUBE 4 系 向けの Docker 環境を提供するプロジェクトです。
 | 分類      | ソフトウェア                | バージョン                   |
 | :-------- | :-------------------------- | :--------------------------- |
 | WebServer | Apache                      | 2.4.x                        |
-| PHP       | PHP                         | 7.1.x ~ 7.4.x, 8.0.x ~ 8.3.x |
-| Database  | PostgreSQL                  | 9.x ~ 14.x                   |
-| Database  | MySQL                       | 5.7.x or 8.0.x               |
+| PHP       | PHP                         | 7.1.x ~ 7.4.x, 8.0.x ~ 8.5.x |
+| Database  | PostgreSQL                  | 9.x ~ 18.x                   |
+| Database  | MySQL                       | 5.7.x, 8.0.x ~ 8.4.x         |
 | Database  | SQLite                      | 3.x                          |
 | DBMS      | Adminer (PostgreSQL/SQLite) |                              |
 | DBMS      | phpMyAdmin (MySQL)          |                              |
